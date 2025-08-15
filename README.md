@@ -1,3 +1,3 @@
 # procedura-blog
 Procedura Blog - SOP Solutions &amp; Process Automation
-https://rickardhultgren.github.io/procedurablog/
+https://rickardhultgren.github.io/procedura-blog/

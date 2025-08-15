@@ -1,6 +1,4 @@
 ---
-<!-- about.md -->
----
 layout: page
 title: About
 ---

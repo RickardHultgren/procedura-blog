@@ -1,6 +1,4 @@
 ---
-<!-- contact.md -->
----
 layout: page
 title: Contact
 ---

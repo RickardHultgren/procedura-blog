@@ -13,10 +13,10 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 
 # Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+#plugins:
+#  - jekyll-feed
+#  - jekyll-sitemap
+#  - jekyll-seo-tag
 
 # Collections
 collections:

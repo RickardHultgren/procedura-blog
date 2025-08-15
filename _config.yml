@@ -5,6 +5,7 @@ author: "Rickard Hultgren"
 #email: "contact@procedura.dev"
 baseurl: "/procedura-blog"
 url: "https://rickardhultgren.github.io"
+theme: minima
 
 # Build settings
 markdown: kramdown

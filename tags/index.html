@@ -1,0 +1,69 @@
+---
+<!-- tags/index.html -->
+---
+layout: page
+title: Tags
+---
+
+<div class="tags-page">
+    <p>Browse posts by topic:</p>
+    
+    {% assign sorted_tags = site.tags | sort %}
+    
+    <div class="tag-cloud">
+        {% for tag in sorted_tags %}
+            <a href="#{{ tag[0] }}" class="tag tag-large">
+                {{ tag[0] }} ({{ tag[1].size }})
+            </a>
+        {% endfor %}
+    </div>
+    
+    {% for tag in sorted_tags %}
+        <section class="tag-section" id="{{ tag[0] }}">
+            <h2>{{ tag[0] }} ({{ tag[1].size }} posts)</h2>
+            
+            <ul class="post-list">
+                {% assign posts = tag[1] | sort: 'date' | reverse %}
+                {% for post in posts %}
+                    <li class="post-item">
+                        <h3 class="post-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                        
+                        <p class="post-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </time>
+                        </p>
+                        
+                        <div class="post-excerpt">
+                            {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endfor %}
+</div>
+
+<style>
+.tag-cloud {
+    margin: 2rem 0;
+}
+
+.tag-large {
+    font-size: 1.1rem;
+    margin: 0.25rem;
+    display: inline-block;
+}
+
+.tag-section {
+    margin: 3rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.tag-section:first-child {
+    border-top: none;
+}
+</style>

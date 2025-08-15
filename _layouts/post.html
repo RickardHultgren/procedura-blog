@@ -1,0 +1,38 @@
+---
+<!-- _layouts/post.html -->
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: "%B %d, %Y" }}
+            </time>
+            {% if page.author %}
+                by <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">{{ page.author }}</span>
+                </span>
+            {% endif %}
+        </p>
+        
+        {% if page.tags.size > 0 %}
+        <div class="tag-list" aria-label="Post tags">
+            {% for tag in page.tags %}
+                <a href="{{ '/tags/#' | append: tag | relative_url }}" class="tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <p><strong>About Procedura:</strong> We're building the future of Standard Operating Procedures with LYMPHA language and threshold-based decision making. <a href="{{ '/about/' | relative_url }}">Learn more about our mission</a>.</p>
+    </footer>
+</article>
+

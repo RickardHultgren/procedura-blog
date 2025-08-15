@@ -1,0 +1,336 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    
+    <!-- Styles -->
+    <style>
+        /* CSS Variables for Dark Theme */
+        :root {
+            --bg-color: #0d1117;
+            --surface-color: #161b22;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-accent: #58a6ff;
+            --text-hover: #79c0ff;
+            --code-bg: #161b22;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            font-size: 16px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.5rem; }
+        h3 { font-size: 1.25rem; }
+        
+        p { margin-bottom: 1rem; }
+        
+        a {
+            color: var(--text-accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover, a:focus {
+            color: var(--text-hover);
+            outline: 2px solid var(--text-accent);
+            outline-offset: 2px;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .site-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .site-nav a {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .site-nav a:hover, .site-nav a:focus {
+            background-color: var(--border-color);
+            outline: none;
+        }
+
+        /* Main Content */
+        .main-content {
+            min-height: calc(100vh - 200px);
+            padding: 2rem 0;
+        }
+
+        /* Post Styles */
+        .post-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .post-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .post-item:hover {
+            border-color: var(--text-accent);
+        }
+
+        .post-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title a {
+            color: var(--text-primary);
+        }
+
+        .post-meta {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Tags */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: var(--border-color);
+            color: var(--text-primary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .tag:hover, .tag:focus {
+            background-color: var(--text-accent);
+            color: var(--bg-color);
+        }
+
+        /* Code Blocks */
+        code {
+            background-color: var(--code-bg);
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.875rem;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.25rem;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid var(--text-accent);
+            border-color: var(--text-accent);
+        }
+
+        button {
+            background-color: var(--text-accent);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover, button:focus {
+            background-color: var(--text-hover);
+            outline: 2px solid var(--text-hover);
+            outline-offset: 2px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--surface-color);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .site-nav ul {
+                gap: 1rem;
+            }
+            
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.375rem; }
+            
+            .post-item {
+                padding: 1rem;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">
+                    <a href="{{ '/' | relative_url }}" aria-label="Procedura Blog Home">
+                        {{ site.title }}
+                    </a>
+                </h1>
+                <nav class="site-nav" role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                        <li><a href="{{ '/tags/' | relative_url }}">Tags</a></li>
+                        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+                        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content" role="main">
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Exploring the future of procedural automation.</p>
+        </div>
+    </footer>
+</body>
+</html>

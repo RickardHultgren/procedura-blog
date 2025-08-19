@@ -2,11 +2,11 @@
 layout: post
 title: "From Kitchen to Code: A LYMPHA Language Recipe for SOP"
 date: 2025-08-12 01:00:00 +0200
-categories: [Procedura]
+categories: [ActCalc]
 tags: [sop, lympha, recipe]
 ---
 
-Welcome to the first post on Procedura, a blog dedicated to the art and science of Standard Operating Procedures (SOP). As a foundational principle in many fields, from manufacturing to medicine, a well-defined SOP ensures consistency, accuracy, and reliability. But what if we could make these procedures more formal, more structured, and even machine-readable?
+Welcome to the first post on ActCalc, a blog dedicated to the art and science of Standard Operating Procedures (SOP). As a foundational principle in many fields, from manufacturing to medicine, a well-defined SOP ensures consistency, accuracy, and reliability. But what if we could make these procedures more formal, more structured, and even machine-readable?
 
 This is where languages like **LYMPHA** come in. Originally designed for clinical workflows, LYMPHA provides a syntax for defining a series of events, or statements, which can be either **procedures** (actions to be executed) or **factors** (data points or conditions). Each statement is linked in a logical flow, much like a flow chart, but expressed in a clean, code-like format.
 

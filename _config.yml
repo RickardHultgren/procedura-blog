@@ -1,9 +1,9 @@
 # _config.yml
-title: "Procedura Blog"
+title: "ActCalc Blog"
 description: "Exploring Standard Operating Procedures, Process Automation, and the Future of Workflow Management"
 author: "Rickard Hultgren"
-#email: "contact@procedura.dev"
-baseurl: "/procedura-blog"
+#email: "contact@ActCalc.dev"
+baseurl: "/ActCalc-blog"
 url: "https://rickardhultgren.github.io"
 theme: minima
 

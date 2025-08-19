@@ -34,7 +34,7 @@ I'd love to hear from you! Whether you have questions about SOPs, want to discus
             <option value="">Select a topic...</option>
             <option value="sop-challenge">I have an SOP challenge</option>
             <option value="lympha-question">Question about LYMPHA language</option>
-            <option value="procedura-demo">Interested in Procedura demo</option>
+            <option value="ActCalc-demo">Interested in ActCalc demo</option>
             <option value="partnership">Partnership opportunity</option>
             <option value="guest-post">Guest post proposal</option>
             <option value="sponsorship">Sponsorship inquiry</option>
@@ -45,7 +45,7 @@ I'd love to hear from you! Whether you have questions about SOPs, want to discus
     
     <div class="form-group">
         <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="6" required aria-describedby="message-help" placeholder="Tell me about your procedural challenges, questions, or ideas..."></textarea>
+        <textarea id="message" name="message" rows="6" required aria-describedby="message-help" placeholder="Tell me about your ActCalcl challenges, questions, or ideas..."></textarea>
         <small id="message-help">Please be as specific as possible</small>
     </div>
     
@@ -68,12 +68,12 @@ I typically respond within 24-48 hours during business days. For urgent matters,
 ## What I'm Looking For
 
 **SOP Challenges:**
-- Complex procedural decisions that are hard to automate
+- Complex ActCalcl decisions that are hard to automate
 - Industry-specific workflow problems
 - Manual processes that need digitization
 
 **Partnership Opportunities:**
-- Tool integrations with Procedura platform
+- Tool integrations with ActCalc platform
 - Content collaboration and guest posting
 - Affiliate partnerships with complementary tools
 
@@ -133,7 +133,7 @@ author: "Rickard Hultgren"
 tags: [sop, lympha, recipe, introduction]
 ---
 
-Welcome to the first post on Procedura, a blog dedicated to the art and science of Standard Operating Procedures (SOP). As a foundational principle in many fields, from manufacturing to medicine, a well-defined SOP ensures consistency, accuracy, and reliability. But what if we could make these procedures more formal, more structured, and even machine-readable?
+Welcome to the first post on ActCalc, a blog dedicated to the art and science of Standard Operating Procedures (SOP). As a foundational principle in many fields, from manufacturing to medicine, a well-defined SOP ensures consistency, accuracy, and reliability. But what if we could make these procedures more formal, more structured, and even machine-readable?
 
 This is where languages like **LYMPHA** come in. Originally designed for clinical workflows, LYMPHA provides a syntax for defining a series of events, or statements, which can be either **procedures** (actions to be executed) or **factors** (data points or conditions). Each statement is linked in a logical flow, much like a flow chart, but expressed in a clean, code-like format.
 
@@ -208,41 +208,41 @@ From clinical trials to baking cookies, the principles of a good SOP are univers
 In upcoming posts, we'll dive deeper into:
 - Threshold-based decision making in LYMPHA
 - Real industrial SOP challenges and solutions
-- How the Procedura platform makes LYMPHA accessible to domain experts
+- How the ActCalc platform makes LYMPHA accessible to domain experts
 
 ---
 
-*Have a procedural challenge you'd like to see translated into LYMPHA? [Share it with me](/contact/) and I might feature it in a future post!*
+*Have a ActCalcl challenge you'd like to see translated into LYMPHA? [Share it with me](/contact/) and I might feature it in a future post!*
 
 ---
-<!-- _posts/2024-08-15-welcome-to-procedura-blog.md -->
+<!-- _posts/2024-08-15-welcome-to-ActCalc-blog.md -->
 ---
 layout: post
-title: "Welcome to the Procedura Blog"
+title: "Welcome to the ActCalc Blog"
 date: 2024-08-15 10:00:00 +0200
 author: "Rickard Hultgren"
-tags: [introduction, procedura, lympha, sop]
+tags: [introduction, ActCalc, lympha, sop]
 ---
 
-Welcome to the Procedura Blog! I'm Rickard Hultgren, and I'm excited to share this journey with you as we explore the fascinating world of Standard Operating Procedures (SOPs), process automation, and the revolutionary LYMPHA programming language.
+Welcome to the ActCalc Blog! I'm Rickard Hultgren, and I'm excited to share this journey with you as we explore the fascinating world of Standard Operating Procedures (SOPs), process automation, and the revolutionary LYMPHA programming language.
 
 ## Why This Blog Exists
 
-Every day, domain experts across industries face the same challenge: they know *what* needs to be done and *how* to do it, but translating that knowledge into systems that computers can execute requires technical expertise they don't have. This gap between domain knowledge and technical implementation is what inspired me to create Procedura.
+Every day, domain experts across industries face the same challenge: they know *what* needs to be done and *how* to do it, but translating that knowledge into systems that computers can execute requires technical expertise they don't have. This gap between domain knowledge and technical implementation is what inspired me to create ActCalc.
 
 This blog serves several purposes:
 
-**Knowledge Sharing:** Real solutions to procedural challenges across industries
+**Knowledge Sharing:** Real solutions to ActCalcl challenges across industries
 **Community Building:** Connecting domain experts with process automation enthusiasts  
-**Transparent Development:** Behind-the-scenes updates about building Procedura
-**Market Validation:** Understanding which procedural problems need solving most urgently
+**Transparent Development:** Behind-the-scenes updates about building ActCalc
+**Market Validation:** Understanding which ActCalcl problems need solving most urgently
 
 ## What We'll Cover
 
 ### Standard Operating Procedures in Action
 - Real-world SOP challenges from chemical safety to quality control
 - Best practices for documenting complex decision trees
-- Case studies of successful procedural automation
+- Case studies of successful ActCalcl automation
 
 ### LYMPHA Language Deep Dives  
 - How threshold-based decisions work in practice
@@ -255,11 +255,11 @@ This blog serves several purposes:
 - **FlödeStyr**: General process management across sectors
 
 ### Tool Integration & Reviews
-I'll be exploring tools that complement procedural work - workflow automation platforms, quality management systems, documentation tools, and more. Some of these reviews will include affiliate partnerships, which help support this blog while providing you with valuable insights.
+I'll be exploring tools that complement ActCalcl work - workflow automation platforms, quality management systems, documentation tools, and more. Some of these reviews will include affiliate partnerships, which help support this blog while providing you with valuable insights.
 
 ## The LYMPHA Difference
 
-Traditional programming languages follow a linear "start-process-end" structure, but procedural work is different. Decisions are made continuously based on current conditions, measurements, and parameters. That's why LYMPHA uses:
+Traditional programming languages follow a linear "start-process-end" structure, but ActCalcl work is different. Decisions are made continuously based on current conditions, measurements, and parameters. That's why LYMPHA uses:
 
 - **Threshold-based decisions** instead of rigid if-then statements
 - **Parameter-centric structure** that mirrors how experts actually think
@@ -268,7 +268,7 @@ Traditional programming languages follow a linear "start-process-end" structure,
 ## Join the Conversation
 
 This isn't just a blog - it's the beginning of a community. I want to hear about:
-- Your most challenging procedural automation problems
+- Your most challenging ActCalcl automation problems
 - Industries where SOPs are critical but hard to digitize  
 - Tools and workflows you're already using
 - Ideas for making domain expertise more accessible
@@ -276,14 +276,14 @@ This isn't just a blog - it's the beginning of a community. I want to hear about
 ## What's Coming
 
 Over the next few weeks, you can expect:
-- **SOP Sunday**: Weekly breakdowns of interesting procedural challenges
+- **SOP Sunday**: Weekly breakdowns of interesting ActCalcl challenges
 - **Industry Spotlights**: Deep dives into sector-specific process needs
 - **Tool Tuesday**: Reviews and integrations with complementary platforms
-- **Behind the Code**: Updates on Procedura development progress
+- **Behind the Code**: Updates on ActCalc development progress
 
 ## Get Involved
 
-Have a procedural challenge you'd like me to tackle? An industry perspective to share? A tool you think I should review? [Get in touch](/contact/) - I'd love to hear from you.
+Have a ActCalcl challenge you'd like me to tackle? An industry perspective to share? A tool you think I should review? [Get in touch](/contact/) - I'd love to hear from you.
 
 You can also follow along on [LinkedIn](https://linkedin.com/in/rickard-hultgren) and [GitHub](https://github.com/rickardhultgren) for updates and code samples.
 

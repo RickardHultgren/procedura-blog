@@ -2,7 +2,7 @@
 layout: post
 title: "Patient Autonomy and Medical Algorithms"
 date: 2025-08-17 01:00:00 +0200
-categories: [Procedura]
+categories: [ActCalc]
 tags: [autonomy, lympha]
 ---
 
